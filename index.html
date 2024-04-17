@@ -9,24 +9,36 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #000; /* Ensure the background contrasts well with button */
+    background-color: #000;
   }
    
   #install-app-button {
-        position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
     background-color: transparent;
     cursor: pointer;
-    opacity: 0.4; /* Set initial opacity */
-    transition: opacity 1s ease-in-out; /* Add transition for opacity */
+    opacity: 0.2;
+    animation: pulse 3s infinite alternate;
   }
 
   #install-app-button:hover {
-    opacity: 1; /* Change opacity on hover */
-    transition: opacity 0.3s ease-in-out; /* Add transition for hover effect */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0.2;
+    }
   }
  </style>
 </head>
@@ -37,7 +49,7 @@
       <defs>
         <style>.cls-1{fill:#fff;}</style>
       </defs>
-      <title>⧉</title>
+      <title>INSTALL</title>
       <path class="cls-1" d="M194.91,543.55l95.93,84.77,95.43-84.27a15,15,0,0,0-19.86-22.49l-60.82,53.71V459.81a15,15,0,0,0-30,0v115l-60.82-53.74a15,15,0,0,0-19.86,22.48Z" transform="translate(-189.84 -444.81)"/><path class="cls-1" d="M376.34,603.16a15,15,0,0,0-15,15v25.5a8.11,8.11,0,0,1-8,8H227.84a8.11,8.11,0,0,1-8-8v-25.5a15,15,0,0,0-30,0v25.5a38,38,0,0,0,38,38h125.5a38,38,0,0,0,38-38v-25.5A15,15,0,0,0,376.34,603.16Z" transform="translate(-189.84 -444.81)"/></svg>
   </div>
 
