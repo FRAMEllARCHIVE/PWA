@@ -4,37 +4,38 @@
 <link rel="manifest" href="manifest.json">
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>INSTALL PWA</title>
+ <title>PONDER</title>
  <style>
   body {
     margin: 0;
     padding: 0;
     background-color: black;
-    position: relative;
+    position: relative; /* Needed for absolute positioning of button */
   }
   
   #install-app-container {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: absolute; /* Position button absolutely */
+    top: 10px; /* Adjust top margin for desired positioning */
+    right: 10px;  /* Adjust right margin for desired positioning */
   }
   
   #install-app-button {
     border: none;
-    background-color: transparent;
+    background-color: transparent; /* Transparent background for SVG fill */
     cursor: pointer;
   }
   
+  /* Adjust SVG size if needed (optional) */
   #install-app-button svg {
-    width: 50px;
-    height: 50px;
+    width: 50px; /* Example width adjustment */
+    height: 50px; /* Example height adjustment */
   }
   
 </style>
 </head>
 <body>
   
-  <div id="install-app-container" style="display: none;">
+  <div id="install-app-container">
     <svg id="install-app-button" viewBox="0 0 201.5 236.85" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
       <defs>
         <style>.cls-1{fill:#fff;}</style>
