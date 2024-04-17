@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>PONDER</title>
+ <style>
+  body {
+   margin: 0;
+   padding: 0;
+   background-color: #f0f0f0;
+  }
+  
+  #install-app-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+ </style>
+</head>
+<body>
+ 
+  <div id="install-app-container" style="display: none;">
+    <svg id="install-app-button" viewBox="0 0 201.5 236.85" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+      <defs>
+        <style>.cls-1{fill:#fff;}</style>
+      </defs>
+      <title>install</title>
+      <path class="cls-1" d="M194.91,543.55l95.93,84.77,95.43-84.27a15,15,0,0,0-19.86-22.49l-60.82,53.71V459.81a15,15,0,0,0-30,0v115l-60.82-53.74a15,15,0,0,0-19.86,22.48Z" transform="translate(-189.84 -444.81)"/><path class="cls-1" d="M376.34,603.16a15,15,0,0,0-15,15v25.5a8.11,8.11,0,0,1-8,8H227.84a8.11,8.11,0,0,1-8-8v-25.5a15,15,0,0,0-30,0v25.5a38,38,0,0,0,38,38h125.5a38,38,0,0,0,38-38v-25.5A15,15,0,0,0,376.34,603.16Z" transform="translate(-189.84 -444.81)"/></svg>
+  </div>
+
+ <script>
+  const installAppContainer = document.getElementById('install-app-container');
+  const installAppButton = document.getElementById('install-app-button');
+
+  window.addEventListener('beforeinstallprompt', (event) => {
+   event.preventDefault();
+   installAppContainer.style.display = 'block';
+
+   installAppButton.addEventListener('click', async () => {
+    await event.prompt();
+    installAppContainer.style.display = 'none';
+   });
+  });
+ </script>
+
+</body>
+</html>
